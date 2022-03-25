@@ -28,7 +28,7 @@ function Navigation({ isMenuOpen }: NavigationProp) {
   return (
     <nav
       className={clsx(
-        'fixed top-0 right-0 h-screen w-64 bg-white/5 backdrop-blur-[81.5485px] transition-[right]',
+        'z-10 fixed top-0 right-0 h-screen w-64 bg-white/5 backdrop-blur-[81.5485px] transition-[right]',
         !isMenuOpen && '-right-full'
       )}
     >
