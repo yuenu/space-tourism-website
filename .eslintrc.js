@@ -37,7 +37,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/member-delimiter-style': 'warn',
+    '@typescript-eslint/member-delimiter-style': 0,
     '@typescript-eslint/no-var-requires': 'warn',
     '@typescript-eslint/no-empty-function': 'warn',
     '@typescript-eslint/no-use-before-define': 'error',
