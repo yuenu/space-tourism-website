@@ -1,30 +1,36 @@
 import { Icon } from '.'
 import clsx from 'clsx'
+import { Link, useLocation } from 'react-router-dom'
 
-// const navData = [
-//   {
-//     id: '00',
-//     name: 'Home'
-//   },
-//   {
-//     id: '01',
-//     name: 'Destination'
-//   },
-//   {
-//     id: '02',
-//     name: 'Destination'
-//   },
-//   {
-//     id: '03',
-//     name: 'Destination'
-//   }
-// ]
+const navigationItems = [
+  {
+    id: '00',
+    name: 'Home',
+    link: '/'
+  },
+  {
+    id: '01',
+    name: 'Destination',
+    link: '/destination'
+  },
+  {
+    id: '02',
+    name: 'Crew',
+    link: '/crew'
+  },
+  {
+    id: '03',
+    name: 'Technology',
+    link: '/technology'
+  }
+]
 
 type NavigationProp = {
   isMenuOpen: boolean
 }
 
 function Navigation({ isMenuOpen }: NavigationProp) {
+  const location = useLocation()
   return (
     <nav
       className={clsx(
@@ -32,36 +38,53 @@ function Navigation({ isMenuOpen }: NavigationProp) {
         !isMenuOpen && '-right-full'
       )}
     >
-      <ul className="mt-[16vh] text-xl text-white pl-10 space-y-8 uppercase">
-        <li
+      <ul className="mt-[16vh] text-xl text-white pl-10 space-y-8 uppercase text-left">
+        {navigationItems.map((item) => {
+          return (
+            <li
+              key={item.id}
+              className={clsx(
+                'relative',
+                location.pathname === item.link &&
+                  "before:content-[''] before:absolute before:h-full before:w-1 before:bg-white before:right-[1px] before:top-0"
+              )}
+            >
+              <Link to={item.link} className="inline-block w-full font-normal">
+                <span className="mr-4 font-bold">{item.id}</span>
+                {item.name}
+              </Link>
+            </li>
+          )
+        })}
+        {/* <li
           className={clsx(
             'relative',
             "before:content-[''] before:absolute before:h-full before:w-1 before:bg-white before:right-0 before:top-0"
           )}
         >
-          <a href="#" className="font-normal">
+          <Link to="/" className="font-normal">
             <span className="mr-4 font-bold">00</span>
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="font-normal">
+          <Link to="/destination" className="font-normal">
             <span className="mr-4 font-bold">01</span>
             Destination
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="font-normal">
+          <Link to="/crew" className="font-normal">
             <span className="mr-4 font-bold">02</span>
             Crew
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="font-normal">
+          <Link to="/technology" className="font-normal">
             <span className="mr-4 font-bold">03</span>
             Technology
-          </a>
-        </li>
+          </Link>
+        </li> */}
       </ul>
     </nav>
   )
