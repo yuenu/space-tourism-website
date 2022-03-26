@@ -1,21 +1,14 @@
 import { useState } from 'react'
 import clsx from 'clsx'
+import DATA from '@/data.json'
 import { Main } from '@/layouts'
 import { Header, Heading } from '@/components'
-import DATA from '@/data.json'
+import type { ICrew } from '@/types'
 
 const CREW_DATA = DATA.crew
 
 type IState = {
-  iData: {
-    bio: string
-    images: {
-      png: string
-      webp: string
-    }
-    name: string
-    role: string
-  }
+  iData: ICrew
   currentCrew: number
   setCurrentCrew: React.Dispatch<React.SetStateAction<number>>
 }
@@ -55,10 +48,10 @@ function Container({ iData, currentCrew, setCurrentCrew }: IState) {
 
       <div className="mb-[4vh] font-['Bellefair'] uppercase">
         <h4 className="mb-[1vh] text-xl text-white/50">{iData.role}</h4>
-        <h3 className="text-3xl">{iData.name}</h3>
+        <h2 className="text-3xl">{iData.name}</h2>
       </div>
 
-      <p className="pb-20 tracking-wider px-7 text-blue-lighter font-extralight">
+      <p className="tracking-wider px-7 text-blue-lighter font-extralight">
         {iData.bio}
       </p>
     </div>

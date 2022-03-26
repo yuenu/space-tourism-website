@@ -1,29 +1,19 @@
 import { useState } from 'react'
-import { Header, Heading } from '@/components'
-import DATA from '@/data.json'
-import { DESTINATION_ITEMS } from '@/constant'
 import clsx from 'clsx'
+import DATA from '@/data.json'
+import { Header, Heading } from '@/components'
+import { DESTINATION_ITEMS } from '@/constant'
 import { Main } from '@/layouts'
+import { IDestination } from '@/types'
 
 const destinationData = DATA.destinations
-
-type IState = {
-  name: string
-  images: {
-    png: string
-    webp: string
-  }
-  description: string
-  distance: string
-  travel: string
-}
 
 function Container({
   iData,
   currentPlanet,
   setCurrentPlanet
 }: {
-  iData: IState
+  iData: IDestination
   currentPlanet: number
   setCurrentPlanet: React.Dispatch<React.SetStateAction<number>>
 }) {
@@ -54,7 +44,7 @@ function Container({
   )
 }
 
-function Details({ iData }: { iData: IState }) {
+function Details({ iData }: { iData: IDestination }) {
   return (
     <div className="text-center text-white uppercase">
       <div className="w-5/6 h-[1px] mx-auto bg-[#383B4B] mb-6"></div>

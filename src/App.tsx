@@ -1,7 +1,7 @@
-import { Crew } from './pages'
+import { Technology } from './pages'
 
 function App() {
-  return <Crew />
+  return <Technology />
 }
 
 export default App
