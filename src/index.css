@@ -10,25 +10,6 @@ body {
   font-weight: 400;
 }
 
-.home {
-  background-image: url(./assets/home/background-home-desktop.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-@media (max-width: 1024px) {
-  .home {
-    background-image: url(./assets/home/background-home-tablet.jpg);
-  }
-}
-
-@media (max-width: 600px) {
-  .home {
-    background-image: url(./assets/home/background-home-mobile.jpg);
-  }
-}
-
 .plant {
   animation: rotate 58s linear infinite;
 }

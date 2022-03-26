@@ -1,7 +1,7 @@
-import { Destination } from './pages'
+import { Crew } from './pages'
 
 function App() {
-  return <Destination />
+  return <Crew />
 }
 
 export default App

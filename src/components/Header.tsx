@@ -1,24 +1,24 @@
 import { Icon } from '.'
 import clsx from 'clsx'
 
-const navData = [
-  {
-    id: '00',
-    name: 'Home'
-  },
-  {
-    id: '01',
-    name: 'Destination'
-  },
-  {
-    id: '02',
-    name: 'Destination'
-  },
-  {
-    id: '03',
-    name: 'Destination'
-  }
-]
+// const navData = [
+//   {
+//     id: '00',
+//     name: 'Home'
+//   },
+//   {
+//     id: '01',
+//     name: 'Destination'
+//   },
+//   {
+//     id: '02',
+//     name: 'Destination'
+//   },
+//   {
+//     id: '03',
+//     name: 'Destination'
+//   }
+// ]
 
 type NavigationProp = {
   isMenuOpen: boolean

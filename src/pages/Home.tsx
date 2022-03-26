@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Header } from '@/components'
+import { Main } from '@/layouts'
 
 function Content() {
   /**
@@ -47,11 +48,10 @@ export function Home() {
    *
    */
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const onHamburgerButtonClick = () => {
-    setIsMenuOpen((prev) => !prev)
-  }
+  const onHamburgerButtonClick = () => setIsMenuOpen((prev) => !prev)
+
   return (
-    <div className="w-screen min-h-screen home">
+    <Main className="bg-home">
       <Header
         onHamburgerButtonClick={onHamburgerButtonClick}
         isMenuOpen={isMenuOpen}
@@ -60,6 +60,6 @@ export function Home() {
         <Content />
         <ExploreAction />
       </div>
-    </div>
+    </Main>
   )
 }

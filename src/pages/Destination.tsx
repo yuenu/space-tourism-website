@@ -1,8 +1,11 @@
 import { useState } from 'react'
-import { Header } from '@/components'
+import { Header, Heading } from '@/components'
 import DATA from '@/data.json'
 import { DESTINATION_ITEMS } from '@/constant'
 import clsx from 'clsx'
+import { Main } from '@/layouts'
+
+const destinationData = DATA.destinations
 
 type IState = {
   name: string
@@ -25,10 +28,8 @@ function Container({
   setCurrentPlanet: React.Dispatch<React.SetStateAction<number>>
 }) {
   return (
-    <div className="text-center text-white">
-      <h1 className="mb-8 tracking-widest uppercase">
-        <span className="mr-4 opacity-25">01</span>Pick your destination
-      </h1>
+    <div className="text-center">
+      <Heading numero="01" title="Pick your destination" />
       <img src={iData.images.webp} className="w-1/2 mx-auto mb-6 plant" />
       <ul className="flex justify-center gap-6 mb-8 uppercase">
         {DESTINATION_ITEMS.map((item, index) => (
@@ -69,8 +70,6 @@ function Details({ iData }: { iData: IState }) {
   )
 }
 
-type Plants = 'MOON' | 'MARS' | 'EUROPA' | 'TITAN'
-
 export function Destination() {
   /**
    *  - Header
@@ -93,9 +92,8 @@ export function Destination() {
 
   const [currentPlanet, setCurrentPlanet] = useState(0)
 
-  const destinationData = DATA.destinations
   return (
-    <div className="min-h-screen w-screen bg-cover bg-no-repeat bg-[url('src/assets/destination/background-destination-mobile.jpg')]">
+    <Main className="bg-destination">
       <Header
         isMenuOpen={isMenuOpen}
         onHamburgerButtonClick={onHamburgerButtonClick}
@@ -107,6 +105,6 @@ export function Destination() {
         iData={destinationData[currentPlanet]}
       />
       <Details iData={destinationData[currentPlanet]} />
-    </div>
+    </Main>
   )
 }
