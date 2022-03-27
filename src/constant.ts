@@ -35,3 +35,26 @@ export const DESTINATION_ITEMS = [
     name: 'TITAN'
   }
 ]
+
+export const NAVIGATION_ITEMS = [
+  {
+    id: '00',
+    name: 'Home',
+    link: '/'
+  },
+  {
+    id: '01',
+    name: 'Destination',
+    link: '/destination'
+  },
+  {
+    id: '02',
+    name: 'Crew',
+    link: '/crew'
+  },
+  {
+    id: '03',
+    name: 'Technology',
+    link: '/technology'
+  }
+]

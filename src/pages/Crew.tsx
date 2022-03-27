@@ -15,7 +15,7 @@ type IState = {
 
 function Container({ iData, currentCrew, setCurrentCrew }: IState) {
   return (
-    <div>
+    <div className="flex flex-col h-[calc(100vh-80px)] justify-evenly">
       <Heading numero="02" title="Meet your crew" />
       <div
         className={clsx(
@@ -63,7 +63,6 @@ export function Crew() {
   const onHamburgerButtonClick = () => setIsMenuOpen((prev) => !prev)
   const [currentCrew, setCurrentCrew] = useState(0)
 
-  console.log(CREW_DATA)
   return (
     <Main className="bg-crew">
       <Header

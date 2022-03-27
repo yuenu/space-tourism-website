@@ -15,10 +15,10 @@ type IState = {
 
 function Container({ iData, currentTech, setCurrentTech }: IState) {
   return (
-    <div>
+    <div className="flex flex-col h-[calc(100vh-80px)] justify-evenly">
       <Heading numero="03" title="SPACE LAUNCH 101" />
       <div
-        className="bg-no-repeat w-full h-[190px] bg-cover mb-8"
+        className="bg-no-repeat w-full h-[30vh] bg-cover mb-8"
         style={{
           backgroundImage: `url(${iData.images.portrait})`,
           backgroundPosition: 'center -180px'
@@ -29,8 +29,8 @@ function Container({ iData, currentTech, setCurrentTech }: IState) {
         {TECH_DATA.map((_tech, index) => {
           return (
             <button
-              onClick={() => setCurrentTech(index)}
               key={index}
+              onClick={() => setCurrentTech(index)}
               className={clsx(
                 'w-12 h-12 font-medium border rounded-full',
                 currentTech === index
