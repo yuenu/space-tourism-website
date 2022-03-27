@@ -54,7 +54,7 @@ function ExploreAction() {
   return (
     <div
       className={clsx(
-        'flex items-center justify-center w-[50vw] h-[50vw] mx-auto text-black bg-white rounded-full',
+        'flex items-center justify-center w-[50vw] h-[50vw] mx-auto text-black bg-white rounded-full shadow-lg shadow-[#0B0D19]',
         'lg:w-[274px] lg:h-[274px] lg:mt-auto lg:relative lg:left-40'
       )}
     >

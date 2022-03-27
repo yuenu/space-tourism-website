@@ -114,7 +114,9 @@ export function Header({ onHamburgerButtonClick, isMenuOpen }: HeaderProp) {
         'lg:pt-[40px] lg:pl-[55px] lg:p-0 lg:h-[136px]'
       )}
     >
-      <Icon.Logo viewBox="0 0 60 50" className="w-10 lg:w-12" />
+      <div className="w-10 lg:w-[48px]">
+        <Icon.Logo viewBox="0 0 60 50" className="w-full h-full" />
+      </div>
       <HamburgerMenu
         className="md:hidden"
         isMenuOpen={isMenuOpen}
