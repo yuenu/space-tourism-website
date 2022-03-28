@@ -19,7 +19,7 @@ function DesktopNavigation({ className }: { className: string }) {
             <li
               key={item.id}
               className={clsx(
-                'relative',
+                'relative transition',
                 location.pathname === item.link &&
                   "before:content-[''] before:absolute before:-bottom-[33px] before:w-full before:h-[2px] before:bg-white"
               )}

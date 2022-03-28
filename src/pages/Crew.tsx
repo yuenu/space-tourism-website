@@ -27,7 +27,7 @@ function DektopContainer({
         className
       )}
     >
-      <div className="flex flex-col justify-center flex-1">
+      <div className="flex flex-col pt-[10vh] flex-1">
         <Heading numero="02" title="Meet your crew" />
         <div className="mb-[4vh] font-['Bellefair'] uppercase whitespace-nowrap">
           <h4 className="mb-[1vh] text-[32px] text-white/50">{iData.role}</h4>
