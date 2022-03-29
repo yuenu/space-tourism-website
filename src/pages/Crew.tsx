@@ -23,7 +23,7 @@ function DektopContainer({
   return (
     <div
       className={clsx(
-        'w-full text-left px-[20vh] relative h-[calc(100vh-136px)]',
+        'w-full text-left px-[22vh] relative h-[calc(100vh-136px)]',
         className
       )}
     >

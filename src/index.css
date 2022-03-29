@@ -14,11 +14,74 @@ body {
   animation: rotate 58s linear infinite;
 }
 
+.explore {
+  animation: scale 0.5s linear infinite alternate;
+}
+
+.wave1,
+.wave2 {
+  position: absolute;
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  box-shadow: 0.4rem 0.4rem 0.8rem #c8d0e7, -0.4rem -0.4rem 0.8rem #fff;
+  animation: waves 2s linear infinite;
+  /* background: linear-gradient(to bottom right, #c8d0e7 0%, #fff 100%); */
+}
+
+.wave2 {
+  animation-delay: 1s;
+}
+
+@media (max-width: 1024px) {
+  .explore {
+    animation: none;
+  }
+
+  .wave1,
+  .wave2 {
+    display: none;
+  }
+}
+
+@media (max-width: 476px) {
+  .wave1,
+  .wave2 {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
   }
 }

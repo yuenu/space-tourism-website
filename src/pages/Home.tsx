@@ -54,11 +54,14 @@ function ExploreAction() {
   return (
     <div
       className={clsx(
-        'flex items-center justify-center w-[50vw] h-[50vw] mx-auto text-black bg-white rounded-full shadow-lg shadow-[#0B0D19]',
-        'lg:w-[274px] lg:h-[274px] lg:mt-auto lg:relative lg:left-40'
+        'flex items-center justify-center w-[50vw] h-[50vw] mx-auto text-black bg-white rounded-full shadow-lg shadow-[#0B0D19] max-w-[210px] max-h-[210px] z-50',
+        'lg:full lg:h-full lg:mt-auto lg:relative lg:left-40 lg:max-h-[274px] lg:max-w-[274px]',
+        'explore'
       )}
     >
       <span className="font-['Bellefair'] text-2xl uppercase">Explore</span>
+      <div className="z-10 wave1"></div>
+      <div className="z-10 wave2"></div>
     </div>
   )
 }
@@ -79,7 +82,7 @@ export function Home() {
   const onHamburgerButtonClick = () => setIsMenuOpen((prev) => !prev)
 
   return (
-    <Main className="h-screen bg-home lg:bg-home-desktop">
+    <Main className="h-screen bg-home md:bg-home-tablet lg:bg-home-desktop">
       <Header
         onHamburgerButtonClick={onHamburgerButtonClick}
         isMenuOpen={isMenuOpen}

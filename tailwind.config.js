@@ -10,6 +10,7 @@ module.exports = {
       backgroundImage: {
         home: "url('src/assets/home/background-home-mobile.jpg')",
         'home-desktop': "url('src/assets/home/background-home-desktop.jpg')",
+        'home-tablet': "url('src/assets/home/background-home-tablet.jpg')",
         destination:
           "url('src/assets/destination/background-destination-mobile.jpg')",
         'destination-desktop':

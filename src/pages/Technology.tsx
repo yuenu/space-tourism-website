@@ -53,7 +53,7 @@ function DesktopContainer({
           <div>
             <div className="mb-[4vh] font-['Bellefair'] uppercase">
               <h4 className="mb-[1vh] text-blue-lighter">THE TERMINOLOGY…</h4>
-              <h2 className="text-[56px]">{iData.name}</h2>
+              <h2 className="text-[56px] whitespace-nowrap">{iData.name}</h2>
             </div>
 
             <p className="font-light text-blue-lighter max-w-[400px] leading-[32px] tracking-wider text-lg">

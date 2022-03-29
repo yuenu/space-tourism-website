@@ -12,8 +12,18 @@ function DesktopNavigation({ className }: { className: string }) {
   const location = useLocation()
   return (
     <nav className={clsx('w-full items-center', className)}>
-      <div className="w-[30%] h-[1px] bg-white/25 z-10 relative left-4"></div>
-      <ul className="w-[70%] bg-white/5 backdrop-blur-[81.5485px] h-24 flex items-center gap-20 text-[18px] pl-[10vw] uppercase">
+      <div
+        className={clsx(
+          'w-[30%] h-[1px] bg-white/25 z-10 relative left-4 hidden',
+          'lg:block'
+        )}
+      ></div>
+      <ul
+        className={clsx(
+          'w-[100%] bg-white/5 backdrop-blur-[81.5485px] h-24 flex items-center gap-[5vw] text-[18px] pl-0 justify-center uppercase',
+          'lg:w-[70%] lg:pl-[10vw] lg:justify-start'
+        )}
+      >
         {NAVIGATION_ITEMS.map((item) => {
           return (
             <li
@@ -110,8 +120,9 @@ export function Header({ onHamburgerButtonClick, isMenuOpen }: HeaderProp) {
   return (
     <div
       className={clsx(
-        'flex items-center justify-between px-6 py-4',
-        'lg:pt-[40px] lg:pl-[55px] lg:p-0 lg:h-[136px]'
+        'flex items-center justify-between px-6 py-4 gap-20',
+        'lg:pt-[40px] lg:pl-[55px] lg:p-0 lg:h-[136px]',
+        'xl:pl-[40px] xl:gap-16'
       )}
     >
       <div className="w-10 lg:w-[48px]">
