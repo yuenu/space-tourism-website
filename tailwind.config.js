@@ -8,19 +8,19 @@ module.exports = {
         }
       },
       backgroundImage: {
-        home: "url('src/assets/home/background-home-mobile.jpg')",
-        'home-desktop': "url('src/assets/home/background-home-desktop.jpg')",
-        'home-tablet': "url('src/assets/home/background-home-tablet.jpg')",
+        home: "url('public/assets/home/background-home-mobile.jpg')",
+        'home-desktop': "url('public/assets/home/background-home-desktop.jpg')",
+        'home-tablet': "url('public/assets/home/background-home-tablet.jpg')",
         destination:
-          "url('src/assets/destination/background-destination-mobile.jpg')",
+          "url('public/assets/destination/background-destination-mobile.jpg')",
         'destination-desktop':
-          "url('src/assets/destination/background-destination-desktop.jpg')",
-        crew: "url('src/assets/crew/background-crew-mobile.jpg')",
-        'crew-desktop': "url('src/assets/crew/background-crew-desktop.jpg')",
+          "url('public/assets/destination/background-destination-desktop.jpg')",
+        crew: "url('public/assets/crew/background-crew-mobile.jpg')",
+        'crew-desktop': "url('public/assets/crew/background-crew-desktop.jpg')",
         technology:
-          "url('src/assets/technology/background-technology-mobile.jpg')",
+          "url('public/assets/technology/background-technology-mobile.jpg')",
         'technology-desktop':
-          "url('src/assets/technology/background-technology-desktop.jpg')"
+          "url('public/assets/technology/background-technology-desktop.jpg')"
       }
     }
   },

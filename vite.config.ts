@@ -7,8 +7,6 @@ import svgr from '@svgr/rollup'
 export default defineConfig({
   plugins: [react(), svgr({})],
   resolve: {
-    alias: {
-      '@/': `${path.resolve(__dirname, 'src')}/`
-    }
+    alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }]
   }
 })
